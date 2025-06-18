@@ -1,0 +1,35 @@
+Problem 1: 
+  The navbar doesn't stick after it passes the hero banner.The problem is that somewhere, it's either overflowing when it's not suppoed to, or the stacking order is interrupted.
+
+  Steps taken to fix:
+    - Used dev tools to check each parent to see if overflow was   
+      appied: negative.
+    
+    - Checked whether my <nav> was scrolling when it's not supposed 
+      to: negative.
+    
+    - Checked if any ancestor element had transform, filter, 
+      perspective, or opacity applied: Yes.
+        - Added, "transform-style: preserve-3d" and "will-change: 
+          transform" to .grid-container img:hover {}
+        
+        - Added, "transform: none" to .grid-container.
+    
+    - Since these didn't work, i used position: fixed on the header tag to see if it would work and it did.
+      - Adjusted some html and css to refine it.
+
+Problem 2:
+  - with the adjusted css to fix the previous bug, one of the images 
+    was larger than the rest and was nesting three images. this was because i didn't set a specific height or aspect ratio and the overflow-hidden was interfering with it. 
+
+  - Fix:
+      - Set the height to 300 px in .img-wrapper{}.
+      - Changed the height: auto to height: 100% in .img-wrapper img.
+      - Cleared the cache since it was still not working.
+  
+  - Since the last attempt fixed the issue, i changed the height in img-wrapper to auto and used aspect-ratio: 1 / 1 in img-wrapper{}.
+
+Problem 3:
+  - text-align: justify was being inherited by section p{} due to higher priority.
+  - Fix:
+      - explicitly place text-align: center in .pre-order p{}.

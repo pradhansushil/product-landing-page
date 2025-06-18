@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCYN - Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+  <body>
+    <header id="header">
+      <img id="header-img" src="https://placehold.co/50x50" alt="placeholder image">
+      <nav id="nav-bar">
+        <ul>
+          <li>
+            <a href="#product-overview" class="nav-link">
+              Product Overview
+            </a>
+          </li>          
+          <li><a href="#videos" class="nav-link">Videos</a></li>          
+          <li><a href="#pre-order" class="nav-link">Pre-Order</a></li>          
+          <li>
+            <a href="#mission-statement" class="nav-link">
+              Mission Statement
+            </a>
+          </li>          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>
+            <span class="font-change">ARCYN RE1GN</span> HAS ARRIVED
+          </h1>
+          <h3>Fly like an eagle</h3>
+        </div>
+
+        <a href="#pre-order" class="cta-align-right">Own The Air Now</a>
+      </section>
+
+      <section id="product-overview" class="image-gallery">
+        <h2>Product Overview</h2>
+        <div class="grid-container">
+          <figure>  
+            <a href="/images/A pair of modern bas.jpg" target="_blank">
+              <div class="img-wrapper">
+                <img src="/images/A pair of modern bas.jpg" alt="a pair of golden-yellowish colored basketball shoes." loading="lazy" />
+              </div>
+            </a>
+            <figcaption>
+              Golden Yellow color
+            </figcaption>
+          </figure>
+
+          <figure>
+            <a href="/images/A pair of modern bla.jpg" target="_blank">
+              <div class="img-wrapper">
+                <img src="/images/A pair of modern bla.jpg" alt="a pair of black colored basketball shoes." loading="lazy" />
+              </div>
+            </a>
+            <figcaption>
+              Black color
+            </figcaption>
+          </figure>
+
+          <figure>
+            <a href="/images/A pair of modern gre.jpg" target="_blank">
+              <div class="img-wrapper">
+                <img src="/images/A pair of modern gre.jpg" alt="a pair of gray colored basketball shoes." loading="lazy" />
+              </div>
+            </a>
+            <figcaption>
+              Gray color
+            </figcaption>
+          </figure>
+
+          <figure>
+            <a href="/images/A pair of modern orange.jpg" target="_blank">
+              <div class="img-wrapper">
+                <img src="/images/A pair of modern orange.jpg" alt="a pair of orange colored basketball shoes." loading="lazy" />
+              </div>
+            </a>
+            <figcaption>Orange color</figcaption>
+          </figure>
+
+          <figure>
+            <a href="/images/A pair of modern red.jpg" target="_blank">
+              <div class="img-wrapper">
+                <img src="/images/A pair of modern red.jpg" alt="a pair of red colored basketball shoes." loading="lazy" />
+              </div>
+            </a>
+            <figcaption>
+              Red color
+            </figcaption>
+          </figure>
+
+          <figure>
+            <a href="images/shoe technology.png" target="_blank">
+              <div class="img-wrapper">
+                <img src="/images/shoe technology.png" alt="an image showing the technology inside the basketball shoes. the color is 
+              the golden-yellowish one." loading="lazy" />
+              </div>
+            </a>
+            <figcaption>
+              Technology contained in shoes
+            </figcaption>
+          </figure>
+
+          <figure>
+            <a href="/images/show the grip of the.jpg" target="_blank">
+              <div class="img-wrapper">
+                <img src="/images/show the grip of the.jpg" alt="an image showing the grip of the outsoles of the basketball shoes. the color is the golden-yellowish one." loading="lazy" />
+              </div>
+            </a>
+            <figcaption>
+              Grip shown
+            </figcaption>
+          </figure>
+        </div>
+
+        <h3>Product Description</h3>
+        <p>
+          Designed for athletes who refuse to be grounded, ARCYN basketball shoes feature <strong>cutting-edge BounceTech™ cushioning</strong>, engineered to amplify vertical leap by <strong>up to 5 inches</strong>. The <strong>dual-layer grip outsole</strong> ensures superior traction for both <strong>indoor and outdoor courts</strong>, optimizing control during explosive movements. With a <strong>lightweight, reinforced structure</strong>, ARCYN delivers unmatched agility, stability, and responsiveness—allowing you to soar above the competition.
+        </p>
+      </section>
+      
+      <section id="videos" class="videos">
+        <div class="ad-video">
+          <video id="video" width="100%" controls >
+            <source src="/videos/Unleash_Your_Game_with_ARCYN_Basketball_Shoes.mp4" />
+          </video>
+        </div>
+
+        <div class="pick-up-game-video">
+          <video width="100%" controls >
+            <source src="/videos/Pick_Up_Game_with_ARCYN.mp4" />
+          </video>
+        </div>
+      </section>
+
+      <section id="pre-order" class="pre-order">
+        <div class="price">
+          <h3 class="pre-order-price">PRICE: $149.99</h3>
+          <hr>
+        </div>
+        <div class="features">
+          <ul>
+            <li>High-traction grip technology</li>
+            <li>Lightweight and durable materials</li>
+            <li>Free standard Shipping</li>
+            <li>Exclusive color options</li>
+          </ul>
+        </div>
+        <div class="info">
+          <p>Pre-order ends August 31st</p>
+          <p>Ships October 15th | Express shipping $20</p>
+        </div>
+          <label for="toggle-form" class="pre-order-btn">
+            Own The Air Now
+          </label>
+        </section>
+        
+        <input type="checkbox" name="" id="toggle-form" hidden>
+
+        <form id="form" 
+              class="toggleable-form" 
+              action="https://www.freecodecamp.com/email-submit"
+              method="POST" target="_blank">
+          <input type="email"
+                 id="email"
+                 name="email"
+                 placeholder="Enter your email address"
+                 required
+          />
+
+          <input type="submit"
+                 id="submit"
+                 value="submit"
+          />
+        </form>
+
+      <section id="mission-statement">
+        <h2>Mission Statement</h2>
+        <div class="mission-statement">
+          <p>
+            ARCYN exists to break limits. Blending innovation with style, our mission is to design performance-driven 
+	          footwear for a generation that won’t wait to fly.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <hr>
+
+    <footer class="footer-info">
+      <div class="brand-name">
+        <h3 class="brand-title">ARCYN</h3>
+        <div class="social-media-icons">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="links">
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+        <a href="#">Terms</a>
+      </div>
+
+      <div class="info">
+        <p>&copy; 2025 ARCYN All rights reserved. </p>
+        <p>
+          Disclaimer: This is a personal portfolio project created for educational purposes only. ARCYN is a fictional brand and this site is not intended for commercial use.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll("video").forEach(video => {
+        video.addEventListener("ended", () => {
+          video.currentTime = 0;
+        });
+      });
+    </script>
+  </body>
+</html>
