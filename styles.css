@@ -97,7 +97,7 @@ header nav ul li:not(:last-child) {
   
   position: relative;
   
-  background-image: url('/images/athlete_dunking.jpg');
+  background-image: url('images/athlete_dunking.jpg');
   background-position: center;
   background-size: cover;
   color: var(--white);
