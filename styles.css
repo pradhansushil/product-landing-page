@@ -18,7 +18,7 @@
   --dark-gray: #3f3939;
   --footer-text: #f1f1f1;
   --footer-subtext: #ccc;
-  --hover-highlight: #D3D3D3;
+  --hover-highlight: #d3d3d3;
   --hover-accent: #ffcc00;
 }
 
@@ -55,11 +55,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   position: sticky;
   top: 0;
   z-index: 1000;
-  
+
   background: var(--dark-gray);
   padding: 0.9375rem;
 }
@@ -91,18 +91,13 @@ header nav ul li:not(:last-child) {
 
 /* Hero */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
   position: relative;
-  
-  background-image: url('images/athlete_dunking.jpg');
+
+  background-image: url("images/hero.jpg");
   background-position: center;
   background-size: cover;
   color: var(--white);
   height: 80vh;
-  text-align: var(--text-center);
 }
 
 .hero::before {
@@ -110,12 +105,15 @@ header nav ul li:not(:last-child) {
   inset: 0;
   z-index: 1;
   content: "";
-  
+
   background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  text-align: left;
   z-index: 2;
 }
 
@@ -133,7 +131,9 @@ header nav ul li:not(:last-child) {
 }
 
 .cta-align-right:hover {
-  box-shadow: 0 0 12px var(--cta-color), 0 0 24px var(--cta-color);
+  box-shadow:
+    0 0 12px var(--cta-color),
+    0 0 24px var(--cta-color);
   transition: box-shadow var(--transition-ease);
 }
 
@@ -237,14 +237,16 @@ header nav ul li:not(:last-child) {
 }
 
 .pre-order-btn:hover {
-  box-shadow: 0 0 12px var(--cta-color), 0 0 24px var(--cta-color);
+  box-shadow:
+    0 0 12px var(--cta-color),
+    0 0 24px var(--cta-color);
   transition: box-shadow var(--transition-ease);
 }
 
 /* Form */
 .toggleable-form {
   display: none;
-  
+
   margin: 1rem auto;
   text-align: center;
 }
@@ -296,7 +298,7 @@ header nav ul li:not(:last-child) {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  
+
   margin: 1.5rem 0;
 }
 
