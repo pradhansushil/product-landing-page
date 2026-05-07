@@ -1,4 +1,4 @@
-function getDOMElements(el) {
+export default function getDOMElements(el) {
   return {
     slides: el.querySelectorAll(".slide"),
     arrows: el.querySelectorAll(".slide-arrow"),
