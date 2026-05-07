@@ -132,6 +132,7 @@ header nav ul li:not(:last-child) {
 .slide-arrow {
   position: absolute;
   top: 50%;
+  z-index: 2;
 
   background: none;
   border: none;
