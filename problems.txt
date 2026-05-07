@@ -26,3 +26,9 @@ Problem 3:
 
   Fix:
     - Explicitly set `text-align: center` in `.pre-order p` to override inheritance.
+
+Problem 3:
+startSlide was defined outside initHero and received currentSlide as a parameter. Because JavaScript passes numbers by value, the function was working with its own copy of currentSlide, not the original. So when the interval fired, it was counting on its own, out of sync with what the arrow buttons were doing.
+Fix:
+
+Moved startSlide inside initHero so it automatically has access to the same currentSlide that the arrow handlers use.
