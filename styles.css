@@ -127,6 +127,10 @@ header nav ul li:not(:last-child) {
   object-fit: cover;
 }
 
+.slide:nth-child(2) img {
+  object-position: center 46%;
+}
+
 .slide-arrow {
   position: absolute;
   top: 50%;
