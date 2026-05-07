@@ -32,3 +32,10 @@ startSlide was defined outside initHero and received currentSlide as a parameter
 Fix:
 
 Moved startSlide inside initHero so it automatically has access to the same currentSlide that the arrow handlers use.
+
+Problem 4:
+The slide show for the hero wasn't working at all because of two things: one, i forgot to add the script in html. two, i forgot to export the function within dom-elements.js
+
+Fix:
+- added <script> in index.html, just above the closing body tag.
+- used export default to export getDomEements()
