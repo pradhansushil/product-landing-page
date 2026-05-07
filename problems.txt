@@ -39,3 +39,9 @@ The slide show for the hero wasn't working at all because of two things: one, i 
 Fix:
 - added <script> in index.html, just above the closing body tag.
 - used export default to export getDomEements()
+
+Problem 5:
+The z-index on my .hero::before had a z-index of 1 and my .slide-arrow had none, which means that there was a cover over the arrow buttons.
+
+Fix:
+- gave .slide-arrow a higher index(z-index: 2) in styles.css
