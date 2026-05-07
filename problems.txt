@@ -1,5 +1,5 @@
 Problem 1:
-  The navbar doesn’t stick after it passes the hero banner.  
+  The navbar doesn't stick after it passes the hero banner.
   The issue seems to be caused by either unintended overflow or an interrupted stacking context.
 
   Steps taken to fix:
@@ -8,11 +8,11 @@ Problem 1:
     - Checked if any ancestor element had CSS properties like transform, filter, perspective, or opacity applied: Yes.
       - Added "transform-style: preserve-3d" and "will-change: transform" to `.grid-container img:hover`.
       - Added "transform: none" to `.grid-container`.
-    - Since these didn’t work, applied `position: fixed` to the header tag, which resolved the issue.
+    - Since these didn't work, applied `position: fixed` to the header tag, which resolved the issue.
       - Made some HTML and CSS adjustments to refine the layout.
 
 Problem 2:
-  After adjusting CSS to fix Problem 1, one image appeared larger than the others and nested three images.  
+  After adjusting CSS to fix Problem 1, one image appeared larger than the others and nested three images.
   This was caused by missing explicit height or aspect ratio settings, combined with interference from `overflow-hidden`.
 
   Fix:
@@ -27,21 +27,73 @@ Problem 3:
   Fix:
     - Explicitly set `text-align: center` in `.pre-order p` to override inheritance.
 
-Problem 3:
-startSlide was defined outside initHero and received currentSlide as a parameter. Because JavaScript passes numbers by value, the function was working with its own copy of currentSlide, not the original. So when the interval fired, it was counting on its own, out of sync with what the arrow buttons were doing.
-Fix:
-
-Moved startSlide inside initHero so it automatically has access to the same currentSlide that the arrow handlers use.
-
 Problem 4:
-The slide show for the hero wasn't working at all because of two things: one, i forgot to add the script in html. two, i forgot to export the function within dom-elements.js
+  `startSlide` was defined outside `initHero` and received `currentSlide` as a parameter. Because JavaScript
+  passes numbers by value, the function was working with its own copy of `currentSlide`, not the original.
+  So when the interval fired, it was counting on its own, out of sync with what the arrow buttons were doing.
 
-Fix:
-- added <script> in index.html, just above the closing body tag.
-- used export default to export getDomEements()
+  Fix:
+    - Moved `startSlide` inside `initHero` so it automatically has access to the same `currentSlide` that
+      the arrow handlers use.
 
 Problem 5:
-The z-index on my .hero::before had a z-index of 1 and my .slide-arrow had none, which means that there was a cover over the arrow buttons.
+  The slideshow for the hero wasn't working at all because of two things: the script tag was missing in HTML,
+  and the function inside dom-elements.js was not exported.
 
-Fix:
-- gave .slide-arrow a higher index(z-index: 2) in styles.css
+  Fix:
+    - Added `<script>` in index.html, just above the closing body tag.
+    - Used `export default` to export `getDomElements()`.
+
+Problem 6:
+  The z-index on `.hero::before` was set to 1 and `.slide-arrow` had none, meaning the overlay was covering
+  the arrow buttons.
+
+  Fix:
+    - Gave `.slide-arrow` a higher z-index (z-index: 2) in styles.css.
+
+Problem 7:
+  Color picker swatches not visible on slide 1.
+  The swatch elements were present in the DOM with correct dimensions (28x28px, border-radius: 50%),
+  but were not visible on the page. This was caused by the `.hero::before` overlay sitting at z-index: 1
+  with no z-index set on `.color-picker`, causing the swatches to be painted beneath the overlay.
+
+  Fix:
+    - Added z-index: 3 to `.color-picker` so it renders above the ::before overlay.
+
+Problem 8:
+  After adding z-index, swatches still not visible — `.color-picker` was oversized and positioned behind
+  the navbar. The `.color-picker` container was rendering at 683x372px and appearing behind the navbar at
+  the top of the page instead of at the bottom of the hero. This was caused by `.slide img` (a descendant
+  selector) targeting `#main-shoe-img` inside `.color-picker`, stretching it to 100% height and width of
+  the slide and pushing the swatches out of the visible area.
+
+  Fix:
+    - Changed `.slide img` to `.slide > img` (child combinator) so the rule only targeted direct children
+      of `.slide`, excluding `#main-shoe-img` nested inside `.color-picker`.
+
+Problem 9:
+  After the child combinator fix, `#main-shoe-img` had no size constraints and grew even larger
+  (1608x768px), still hiding the swatches. With `.slide img` no longer applying, `#main-shoe-img` had
+  no sizing rules of its own and expanded to its natural image size.
+
+  Fix:
+    - Added an `#main-shoe-img` rule with width: auto, height: auto, and max-height: 60vh to constrain it.
+    - Added width: auto and height: auto to `.color-picker` to prevent it from stretching.
+
+Problem 10:
+  After the above fixes, swatches became visible but the hero layout was broken — slide images on slides 2
+  and 3 overflowed far beyond the hero section, and slide 1 showed a misaligned shoe image with a black box
+  around it. This was caused by `.slide` and `.slide.active` having no defined height, so slide images had
+  no container bounds to fill. Additionally, `#main-shoe-img` being nested inside `.color-picker` was the
+  root structural issue causing all layout conflicts.
+
+  Fix:
+    - Added overflow: hidden to `.hero-slideshow` to clip overflowing content.
+    - Added height: 100% to both `.slide` and `.slide.active` so images fill the hero correctly.
+    - Moved `#main-shoe-img` out of `.color-picker` in index.html, making it a direct child of `.slide`
+      instead. This resolved all layout conflicts.
+    - Removed the `.slide > img` child combinator — reverted back to `.slide img` since the structural
+      fix in HTML made it unnecessary.
+    - Removed the `#main-shoe-img` override rule entirely — no longer needed.
+    - Repositioned `.color-picker` to bottom: 2rem, left: 50%, transform: translateX(-50%) so swatches
+      are centered at the bottom of the hero instead of fixed to the left.
