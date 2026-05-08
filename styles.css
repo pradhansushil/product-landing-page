@@ -39,7 +39,8 @@ section h2 {
 }
 
 section h3,
-section p {
+section p,
+.specs-list {
   max-width: var(--max-width);
   padding: 0 1rem;
   margin: 0 auto 1rem;
@@ -231,6 +232,36 @@ header nav ul li:not(:last-child) {
     0 0 12px var(--cta-color),
     0 0 24px var(--cta-color);
   transition: box-shadow var(--transition-ease);
+}
+
+/* Product */
+.specs-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.specs-list li {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.specs-list li::before {
+  content: "•";
+  position: absolute;
+  left: 1.2rem;
+  top: 0.1em;
+}
+
+.spec-label {
+  color: var(--cta-color);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.4px;
+}
+
+.spec-value {
+  color: #6b6b6b;
+  font-family: "DM Sans", sans-serif;
 }
 
 /* Videos */
