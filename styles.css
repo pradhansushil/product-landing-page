@@ -28,7 +28,14 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 h2,
@@ -47,6 +54,8 @@ section p,
 }
 
 section p {
+  color: #6b6b6b;
+  font-family: "DM Sans", sans-serif;
   text-align: justify;
   line-height: 1.2;
 }
