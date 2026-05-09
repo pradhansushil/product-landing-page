@@ -36,7 +36,6 @@ h2,
 h3 {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.1rem;
-  color: var(--dark-gray);
 }
 
 h2,
@@ -44,6 +43,16 @@ h3,
 section h2 {
   text-align: var(--text-center);
   margin: var(--margin-section);
+}
+
+section h2,
+section h3 {
+  color: var(--dark-gray);
+}
+
+.hero h1,
+.hero h3 {
+  color: var(--white);
 }
 
 section h3,
