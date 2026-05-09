@@ -14,7 +14,7 @@
 
   --white: #fff;
   --black: #000;
-  --light-gray: #f9f9f9;
+  --light-gray: #e8e8e8;
   --dark-gray: #3f3939;
   --footer-text: #f1f1f1;
   --footer-subtext: #ccc;
@@ -298,8 +298,8 @@ header nav ul li:not(:last-child) {
 .pre-order {
   background: var(--light-gray);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: #6b6b6b;
   line-height: 1.6;
   max-width: 25rem;
   margin: 2rem auto;
@@ -323,9 +323,9 @@ header nav ul li:not(:last-child) {
   padding: 0.5rem 0;
 }
 
-.pre-order p {
-  color: #555;
-  font-size: 0.9rem;
+.info {
+  font-size: 0.8rem;
+  font-style: italic;
   margin: 0.5rem 0;
 }
 
