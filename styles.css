@@ -36,6 +36,7 @@ h2,
 h3 {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.1rem;
+  color: var(--dark-gray);
 }
 
 h2,
