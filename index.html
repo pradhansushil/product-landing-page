@@ -201,28 +201,22 @@
           </span>
         </div>
 
-        <label for="toggle-form" class="pre-order-btn"> Own The Air Now </label>
-      </section>
-
-      <input type="checkbox" name="" id="toggle-form" hidden />
-
-      <form
+        <button class="pre-order-btn"> Own The Air Now </button>
+        <form
         id="form"
         class="toggleable-form"
         action="https://www.freecodecamp.com/email-submit"
         method="POST"
         target="_blank"
       >
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          required
-        />
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
 
-        <input type="submit" id="submit" value="submit" />
+        <label for="name">Full Name: </label>
+        <input type="text" name="name" id="name">
+        <button type="submit"></button>
       </form>
+      </section>
 
       <section id="mission-statement">
         <h2>Mission Statement</h2>
