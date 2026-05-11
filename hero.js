@@ -1,3 +1,4 @@
+import initColorPicker from "./colorPicker.js";
 import getDOMElements from "./dom-elements.js";
 
 function currentDot(dom, index) {
@@ -18,10 +19,8 @@ function initHero() {
   let currentSlide = 0;
   goToSlide(dom, 0);
 
-  dom.swatches.forEach((swatch) => {
-    swatch.addEventListener("click", () => {
-      dom.mainImg.src = swatch.getAttribute("data-image");
-    });
+  initColorPicker(dom, "data-image", (value) => {
+    dom.mainImg.src = value;
   });
 
   dom.arrows[0].addEventListener("click", () => {
