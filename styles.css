@@ -345,14 +345,21 @@ header nav ul li:not(:last-child) {
 }
 
 .pre-order-btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background: var(--cta-color);
-  border-radius: 5px;
+  background-color: var(--cta-color);
+  border: none;
+  border-radius: 12px;
   color: var(--white);
+  cursor: pointer;
+  font-family: "Bebas Neue";
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
   margin-top: 1rem;
-  padding: 0.625rem 0.3125rem;
-  text-decoration: none;
+  padding: 0.5rem;
+  width: 100%;
 }
 
 .pre-order-btn:hover {
@@ -366,12 +373,64 @@ header nav ul li:not(:last-child) {
 .toggleable-form {
   display: none;
 
+  border-top: 1px solid var(--dark-gray);
   margin: 1rem auto;
+  padding-top: 0.7rem;
   text-align: center;
 }
 
 #toggle-form:checked + .toggleable-form {
   display: block;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-field label {
+  min-width: 6rem;
+}
+
+.form-field input {
+  flex: 1;
+
+  background-color: var(--white);
+  border: 1px solid var(--dark-gray);
+  border-radius: 8px;
+  color: #222;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  padding: 0.2rem 0.6rem;
+  outline: none;
+}
+
+.form-field input:focus {
+  border-color: var(--cta-color);
+  box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.2);
+}
+
+.form-submit-btn {
+  border: 2px solid var(--cta-color);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--cta-color);
+  cursor: pointer;
+  font-family: "Bebas Neue";
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  margin-top: 0.6rem;
+  padding: 0.4rem;
+  width: 100%;
+  transition:
+    background-color var(--transition-ease),
+    color var(--transition-ease);
+}
+
+.form-submit-btn:hover {
+  background-color: var(--cta-color);
+  color: var(--white);
 }
 
 /* Footer */
