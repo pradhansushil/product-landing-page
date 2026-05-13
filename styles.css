@@ -379,6 +379,10 @@ header nav ul li:not(:last-child) {
   text-align: center;
 }
 
+.visible {
+  display: block;
+}
+
 #toggle-form:checked + .toggleable-form {
   display: block;
 }
