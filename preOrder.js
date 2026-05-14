@@ -38,6 +38,20 @@ function initPreOrder() {
     selectedColor = value;
   });
   initSizeSelector();
+
+  dom.formSubmitBtn.addEventListener("click", () => {
+    const storedValues = {
+      name: dom.name.value,
+      email: dom.email.value,
+      shoeColor: selectedColor,
+      shoeSize: selectedSize,
+      price: 149.99,
+    };
+
+    localStorage.setItem("pre-order", JSON.stringify(storedValues));
+
+    dom.preOrderForm.classList.remove("visible");
+  });
 }
 
 initPreOrder();

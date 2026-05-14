@@ -7,6 +7,9 @@ export default function getDOMElements(el) {
     mainImg: el.querySelector("#main-shoe-img"),
     swatches: el.querySelectorAll(".swatch"),
     preOrderBtn: el.querySelector(".pre-order-btn"),
+    name: el.querySelector("#name"),
+    email: el.querySelector("#email"),
+    formSubmitBtn: el.querySelector(".form-submit-btn"),
     preOrderForm: el.querySelector("#form"),
   };
 }
