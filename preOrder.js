@@ -1,23 +1,22 @@
 import initColorPicker from "./colorPicker.js";
 import getDOMElements from "./dom-elements.js";
 
-const shoeSizes = [
-  8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5,
-];
-let selectedSize;
+const shoeSizeGroups = ["8–10", "10.5–12", "12.5–14", "14.5–15.5"];
 const container = document.querySelector(".size-selector");
 
+let selectedSize;
+
 function initSizeSelector() {
-  shoeSizes.forEach((size) => {
+  shoeSizeGroups.forEach((group) => {
     const span = document.createElement("span");
-    span.textContent = size;
+    span.textContent = group;
 
     span.addEventListener("click", () => {
       container
         .querySelectorAll("span")
         .forEach((s) => s.classList.remove("selected"));
       span.classList.add("selected");
-      selectedSize = size;
+      selectedSize = group;
     });
 
     container.appendChild(span);

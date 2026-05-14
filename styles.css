@@ -344,6 +344,33 @@ header nav ul li:not(:last-child) {
   margin: 0.5rem 0;
 }
 
+.size-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.size-selector span {
+  border: 1px solid var(--dark-gray);
+  border-radius: 8px;
+  cursor: pointer;
+  padding-inline: 12px;
+}
+
+.size-selector span:hover {
+  background-color: var(--hover-highlight);
+}
+
+.size-selector span.selected {
+  background-color: var(--dark-gray);
+  color: var(--white);
+}
+
 .pre-order-btn {
   display: flex;
   align-items: center;
