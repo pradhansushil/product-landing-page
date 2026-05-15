@@ -482,6 +482,31 @@ header nav ul li:not(:last-child) {
   color: var(--white);
 }
 
+.confirm-wrapper {
+  border-top: 1px solid var(--hover-accent);
+  margin-top: 1rem;
+}
+
+.confirm-div {
+  background-color: var(--white);
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1.5rem;
+}
+
+.confirm-div i {
+  font-size: 2rem;
+  color: #28a745;
+}
+
+.confirm-div h3 {
+  margin: 0.4rem 0;
+}
+
+.confirm-div p {
+  text-align: center;
+}
+
 /* Footer */
 .footer-info {
   background: var(--dark-gray);

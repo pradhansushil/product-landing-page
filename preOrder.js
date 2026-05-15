@@ -53,11 +53,29 @@ function initPreOrder() {
 
     dom.preOrderForm.classList.remove("visible");
 
-    const message =
+    const messageText =
       "You're all set! We'll send a payment link to your email shortly — keep an eye on your inbox.";
+
+    const confirmWrapper = document.createElement("div");
+    confirmWrapper.classList.add("confirm-wrapper");
+
     const confirmationDiv = document.createElement("div");
-    confirmationDiv.textContent = message;
-    preOrderSection.appendChild(confirmationDiv);
+    confirmationDiv.classList.add("confirm-div");
+
+    const checkMarkIcon = document.createElement("i");
+    checkMarkIcon.classList.add("fa-solid", "fa-check");
+    confirmationDiv.appendChild(checkMarkIcon);
+
+    const confirmHeading = document.createElement("h3");
+    confirmHeading.textContent = "Order Received";
+    confirmationDiv.appendChild(confirmHeading);
+
+    const message = document.createElement("p");
+    message.textContent = messageText;
+    confirmationDiv.appendChild(message);
+
+    confirmWrapper.appendChild(confirmationDiv);
+    preOrderSection.appendChild(confirmWrapper);
   });
 }
 
