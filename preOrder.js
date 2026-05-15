@@ -26,7 +26,7 @@ function initSizeSelector() {
 function initPreOrder() {
   const preOrderSection = document.querySelector(".pre-order");
   const dom = getDOMElements(preOrderSection);
-  console.log(dom);
+
   dom.preOrderBtn.addEventListener("click", () => {
     dom.preOrderForm.classList.toggle("visible");
   });
@@ -38,7 +38,9 @@ function initPreOrder() {
   });
   initSizeSelector();
 
-  dom.formSubmitBtn.addEventListener("click", () => {
+  dom.formSubmitBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
     const storedValues = {
       name: dom.name.value,
       email: dom.email.value,
@@ -50,6 +52,12 @@ function initPreOrder() {
     localStorage.setItem("pre-order", JSON.stringify(storedValues));
 
     dom.preOrderForm.classList.remove("visible");
+
+    const message =
+      "You're all set! We'll send a payment link to your email shortly — keep an eye on your inbox.";
+    const confirmationDiv = document.createElement("div");
+    confirmationDiv.textContent = message;
+    preOrderSection.appendChild(confirmationDiv);
   });
 }
 
