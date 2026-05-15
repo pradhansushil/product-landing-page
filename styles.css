@@ -371,6 +371,18 @@ header nav ul li:not(:last-child) {
   color: var(--white);
 }
 
+.trust-signals {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  margin: 1.25rem 0;
+}
+
+.trust-signals i {
+  margin-right: 6px;
+}
+
 .pre-order-btn {
   display: flex;
   align-items: center;
