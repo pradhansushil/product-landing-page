@@ -1,7 +1,7 @@
 import initColorPicker from "./colorPicker.js";
 import getDOMElements from "./dom-elements.js";
 
-const shoeSizeGroups = ["8–10", "10.5–12", "12.5–14", "14.5–15.5"];
+const shoeSizeGroups = ["8–9.5", "10–11.5", "12–13.5", "14–15.5"];
 const container = document.querySelector(".size-selector");
 
 let selectedSize;
