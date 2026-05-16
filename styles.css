@@ -29,6 +29,7 @@ html {
 
 body {
   font-family: "DM Sans", sans-serif;
+  width: 100%;
 }
 
 h1,
@@ -296,6 +297,25 @@ header nav ul li:not(:last-child) {
 .spec-value {
   color: #6b6b6b;
   font-family: "DM Sans", sans-serif;
+}
+
+#product-overview table {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 25rem;
+}
+
+#product-overview table th {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+#product-overview table td {
+  border: 1px solid var(--black);
+  padding: 0.15rem 1rem;
 }
 
 /* Videos */
