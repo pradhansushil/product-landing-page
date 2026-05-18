@@ -85,6 +85,22 @@ header {
   padding: 0.9375rem;
 }
 
+#logo-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  letter-spacing: 5px;
+  fill: white;
+}
+
+#logo-accent {
+  x: 1px;
+  y: 37px;
+  width: 55px;
+  height: 3px;
+  rx: 1.5px;
+  fill: #ff6600;
+}
+
 header nav ul {
   display: flex;
   justify-content: flex-end;
