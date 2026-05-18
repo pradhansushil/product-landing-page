@@ -267,6 +267,15 @@ header nav ul li:not(:last-child) {
   z-index: 2;
 }
 
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: #ff4500;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
 .cta-align-right {
   position: absolute;
   bottom: 2rem;
