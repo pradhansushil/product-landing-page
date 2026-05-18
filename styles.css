@@ -95,7 +95,7 @@ header {
 #logo-accent {
   x: 1px;
   y: 37px;
-  width: 55px;
+  width: 48px; /* reduced from 55px — sits cleanly under "AR" at 36px / letter-spacing 5px */
   height: 3px;
   rx: 1.5px;
   fill: #ff6600;
@@ -103,6 +103,7 @@ header {
 
 header nav ul {
   display: flex;
+  align-items: center; /* added — prevents uneven hit areas when item heights differ */
   justify-content: flex-end;
   flex-direction: row;
 
@@ -191,6 +192,7 @@ header nav ul li:not(:last-child) {
 
 .slide-dots {
   display: flex;
+  align-items: center; /* added — keeps dots on the same midline if sizes ever vary */
   gap: 0.5rem;
 
   position: absolute;
@@ -568,6 +570,7 @@ header nav ul li:not(:last-child) {
 
 .footer-info .social-media-icons {
   display: flex;
+  align-items: center; /* added — prevents vertical drift between icons of differing glyph heights */
   gap: 1rem;
 }
 
@@ -583,6 +586,7 @@ header nav ul li:not(:last-child) {
 
 .footer-info .links {
   display: flex;
+  align-items: center; /* added — defensive alignment for consistent vertical centering */
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
