@@ -40,17 +40,8 @@ h3 {
 }
 
 h2,
-section h2 {
-  text-align: var(--text-center);
-  margin: var(--margin-section);
-}
-
-section h2,
-section h3 {
+h3 {
   color: var(--dark-gray);
-}
-
-section h3 {
   text-align: var(--text-center);
   margin: var(--margin-section);
 }
@@ -59,13 +50,6 @@ section h3 {
   color: var(--white);
   margin-bottom: 0.2rem;
   line-height: 1.05;
-}
-
-section h3,
-.specs-list {
-  max-width: var(--max-width);
-  padding: 0 1rem;
-  margin: 0 auto 1rem;
 }
 
 /* Scoped to non-hero sections so hero <p> tags are not affected */
@@ -331,7 +315,10 @@ header nav ul li:not(:last-child) {
 /* Product */
 .specs-list {
   list-style: none;
+  max-width: var(--max-width);
   padding-left: 0;
+  padding-right: 1rem;
+  margin: 0 auto 1rem;
 }
 
 .specs-list li {
@@ -441,7 +428,7 @@ header nav ul li:not(:last-child) {
   margin-right: 10px;
 }
 
-.info {
+.pre-order-meta {
   font-size: 0.8rem;
   font-style: italic;
   margin: 0.5rem 0;
@@ -670,7 +657,7 @@ header nav ul li:not(:last-child) {
   text-decoration: underline;
 }
 
-.footer-info .info {
+.footer-copy {
   color: var(--footer-subtext);
   font-size: 0.8rem;
   line-height: 1.4;
@@ -689,7 +676,7 @@ header nav ul li:not(:last-child) {
     gap: 1rem;
   }
 
-  .footer-info .info {
+  .footer-copy {
     font-size: 0.75rem;
   }
 }
