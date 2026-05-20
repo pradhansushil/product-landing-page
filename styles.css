@@ -468,10 +468,15 @@ header nav ul li:not(:last-child) {
 .trust-signals {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 
   list-style: none;
   margin: 1.25rem 0;
+}
+
+.trust-signal-item {
+  flex: 1;
+  text-align: center;
 }
 
 .trust-signals i {
