@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,34 +44,33 @@
       <section class="hero">
         <div class="hero-slideshow">
 
-          <!-- Slide 1: hero image is a direct child of .slide, color picker is separate -->
           <div class="slide active">
             <img id="main-shoe-img" src="images/hero.jpg" alt="An image of a golden yellow performance basketball shoe." />
             <div class="color-picker">
-              <span 
+              <button 
                 class="swatch selected" 
                 data-image="images/hero.jpg" 
                 title="Golden Yellow" 
                 style="background-color: #FFC300;"
-              ></span>
-              <span 
+              ></button>
+              <button 
                 class="swatch"
                 data-image="images/grey.jpg"
                 title="Grey"
                 style="background-color: #888888;"
-              ></span>
-              <span
+              ></button>
+              <button
                 class="swatch"
                 data-image="images/orange.jpg" 
                 title="Orange"
                 style="background-color: #FF6600;"
-              ></span>
-              <span
+              ></button>
+              <button
                 class="swatch"
                 data-image="images/red.jpg"
                 title="Red"
                 style="background-color: #CC0000;"
-              ></span>              
+              ></button>              
             </div>
           </div>
 
@@ -83,13 +82,13 @@
             <img src="images/shoe-grip.jpg" alt="An image showing the grip of the basketball shoe." />
           </div>
           
-          <button class="slide-arrow prev">&#8592</button>
-          <button class="slide-arrow next">&#8594</button>
+          <button class="slide-arrow prev" aria-label="Previous slide">&#8592</button>
+          <button class="slide-arrow next" aria-label="Next slide">&#8594</button>
           
           <div class="slide-dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+            <button class="dot active" aria-label="Go to slide 1"></button>
+            <button class="dot" aria-label="Go to slide 2"></button>
+            <button class="dot" aria-label="Go to slide 3"></button>
           </div>
         </div>
 
@@ -97,90 +96,95 @@
           <p class="hero-eyebrow">Signature Series</p>
           <h1><span class="font-change">ARCYN RE1GN |</span> The Air Is Yours</h1>
           <p class="hero-subhead">Engineered for athletes who refuse to be grounded.</p>
-          <h3>Made for the court. $149.99</h3>
+          <p class="hero-price">Made for the court. $149.99</p>
         </div>
 
         <a href="#pre-order" class="cta-align-right">Pre-order</a>
       </section>
 
       <section id="product-overview">
-      <h3>Product Description</h3>
+        <h2>Product Description</h2>
 
-      <p>
-        Designed for athletes who refuse to be grounded, ARCYN basketball shoes are engineered for explosive performance on any court.
-      </p>
+        <p>
+          Designed for athletes who refuse to be grounded, ARCYN basketball shoes are engineered for explosive performance on any court.
+        </p>
 
-      <p>
-        Built for both indoor and outdoor play, they deliver unmatched agility, stability, and responsiveness — so you can soar above the competition.
-      </p>
+        <p>
+          Built for both indoor and outdoor play, they deliver unmatched agility, stability, and responsiveness — so you can soar above the competition.
+        </p>
 
-      <ul class="specs-list">
-        <li>
-          <span class="spec-label">BounceTech™:</span>
-          <span class="spec-value">+5 inch vertical</span>
-        </li>
-        <li>
-          <span class="spec-label">XDR Rubber:</span>
-          <span class="spec-value">Extreme-duty outsole</span>
-        </li>
-        <li>
-          <span class="spec-label">Dual-layer grip:</span>
-          <span class="spec-value">Indoor + outdoor traction</span>
-        </li>
-        <li>
-          <span class="spec-label">Construction:</span>
-          <span class="spec-value">Lightweight + reinforced</span>
-        </li>
-      </ul>
+        <ul class="specs-list">
+          <li>
+            <span class="spec-label">BounceTech™:</span>
+            <span class="spec-value">+5 inch vertical</span>
+          </li>
+          <li>
+            <span class="spec-label">XDR Rubber:</span>
+            <span class="spec-value">Extreme-duty outsole</span>
+          </li>
+          <li>
+            <span class="spec-label">Dual-layer grip:</span>
+            <span class="spec-value">Indoor + outdoor traction</span>
+          </li>
+          <li>
+            <span class="spec-label">Construction:</span>
+            <span class="spec-value">Lightweight + reinforced</span>
+          </li>
+        </ul>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Your Shoe Size</th>
-            <th>Order Size</th>
-          </tr>
-        </thead>
-        
-        <tbody>
-          <tr>
-            <td>8, 8.5, 9, 9.5</td>
-            <td>8–9.5</td>
-          </tr>
-          <tr>
-            <td>10, 10.5, 11, 11.5</td>
-            <td>10–11.5</td>
-          </tr>
-          <tr>
-            <td>12, 12.5, 13, 13.5</td>
-            <td>12–13.5</td>
-          </tr>
-          <tr>
-            <td>14, 14.5, 15, 15.5</td>
-            <td>14–15.5</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+        <table>
+          <caption>Size ordering guide</caption>
+          <thead>
+            <tr>
+              <th>Your Shoe Size</th>
+              <th>Order Size</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td>8, 8.5, 9, 9.5</td>
+              <td>8–9.5</td>
+            </tr>
+            <tr>
+              <td>10, 10.5, 11, 11.5</td>
+              <td>10–11.5</td>
+            </tr>
+            <tr>
+              <td>12, 12.5, 13, 13.5</td>
+              <td>12–13.5</td>
+            </tr>
+            <tr>
+              <td>14, 14.5, 15, 15.5</td>
+              <td>14–15.5</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
       <section id="videos" class="videos">
+        <h2 class="visually-hidden">Videos</h2>
         <div class="ad-video">
           <video id="video" width="100%" controls>
             <source
               src="videos/Unleash_Your_Game_with_ARCYN_Basketball_Shoes.mp4"
+              type="video/mp4"
             />
+            <track kind="captions" label="English captions" srclang="en" src="" default />
           </video>
         </div>
 
         <div class="pick-up-game-video">
           <video width="100%" controls>
-            <source src="videos/Pick_Up_Game_with_ARCYN.mp4" />
+            <source src="videos/Pick_Up_Game_with_ARCYN.mp4" type="video/mp4" />
+            <track kind="captions" label="English captions" srclang="en" src="" default />
           </video>
         </div>
       </section>
 
       <section id="pre-order" class="pre-order">
         <div class="price">
-          <h3 class="pre-order-price">PRICE: $149.99</h3>
+          <p class="pre-order-price">PRICE: $149.99</p>
           <hr />
         </div>
         <div class="features">
@@ -197,87 +201,81 @@
           <p>Pre-order ends August 31st</p>
           <p>Ships October 15th | Express shipping $20</p>        
         </div>
-        <h3>Size</h3>
+        <h2>Size</h2>
         <div class="size-selector">
         </div>
         <div class="color-picker">
-          <span
+          <button
             class="swatch selected"
             data-color="golden-yellow"
             title="Golden Yellow"
             style="background-color: #FFC300;"
-          > 
-          </span>
-          <span
+          ></button>
+          <button
             class="swatch"
             data-color="orange"
             title="Orange"
             style="background-color: #FF6600;"
-          > 
-          </span>
-          <span
+          ></button>
+          <button
             class="swatch"
             data-color="red"
             title="Red"
             style="background-color: #CC0000;"
-          > 
-          </span>
-          <span
+          ></button>
+          <button
             class="swatch"
             data-color="grey"
             title="Grey"
             style="background-color: #888888;"
-          > 
-          </span>
-          <span
+          ></button>
+          <button
             class="swatch"
             data-color="black"
             title="Black"
             style="background-color: #000;"
-          > 
-          </span>
+          ></button>
         </div>
 
         <button class="pre-order-btn"> Own The Air Now </button>
-        <div class="trust-signals">
-          <span>
+        <ul class="trust-signals">
+          <li>
             <i class="fa-solid fa-truck"></i>
             Free standard shipping
-          </span>
-          <span>
+          </li>
+          <li>
             <i class="fa-solid fa-rotate-left"></i>
             30-day returns
-          </span>
-          <span>
+          </li>
+          <li>
             <i class="fa-solid fa-lock"></i>
             Secure checkout
-          </span>
-        </div>
+          </li>
+        </ul>
 
         <form
           id="form"
-          class="toggleable-form"        
+          class="toggleable-form"
+          action="#"
           method="POST"
         >
-        <div class="form-field">
-          <label for="email">Email: </label>
-          <input type="email" name="email" id="email">
-        </div>
+          <div class="form-field">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+          </div>
 
-        <div class="form-field">
-          <label for="name">Full Name: </label>
-          <input type="text" name="name" id="name">
-        </div>
-        <button type="submit" class="form-submit-btn">Confirm</button>
-      </form>
+          <div class="form-field">
+            <label for="name">Full Name: </label>
+            <input type="text" name="name" id="name">
+          </div>
+          <button type="submit" class="form-submit-btn">Confirm</button>
+        </form>
       </section>
     </main>
 
-    <hr />
-
     <footer class="footer-info">
       <div class="brand-name">
-        <h3 class="brand-title">ARCYN</h3>
+        <p class="brand-title">ARCYN</p>
         <div class="social-media-icons">
           <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
@@ -297,11 +295,11 @@
         </div>
       </div>
 
-      <div class="links">
+      <nav aria-label="Footer">
         <a href="#">Contact Us</a>
         <a href="#">About Us</a>
         <a href="#">Terms</a>
-      </div>
+      </nav>
 
       <div class="info">
         <p>Breaking limits, one court at a time.</p>

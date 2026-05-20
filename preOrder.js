@@ -8,18 +8,19 @@ let selectedSize;
 
 function initSizeSelector() {
   shoeSizeGroups.forEach((group) => {
-    const span = document.createElement("span");
-    span.textContent = group;
+    const btn = document.createElement("button");
+    btn.textContent = group;
+    btn.type = "button";
 
-    span.addEventListener("click", () => {
+    btn.addEventListener("click", () => {
       container
-        .querySelectorAll("span")
-        .forEach((s) => s.classList.remove("selected"));
-      span.classList.add("selected");
+        .querySelectorAll("button")
+        .forEach((b) => b.classList.remove("selected"));
+      btn.classList.add("selected");
       selectedSize = group;
     });
 
-    container.appendChild(span);
+    container.appendChild(btn);
   });
 }
 
@@ -58,10 +59,8 @@ function initPreOrder() {
 
     const confirmWrapper = document.createElement("div");
     confirmWrapper.classList.add("confirm-wrapper");
-
     const confirmationDiv = document.createElement("div");
     confirmationDiv.classList.add("confirm-div");
-
     const checkMarkIcon = document.createElement("i");
     checkMarkIcon.classList.add("fa-solid", "fa-check");
     confirmationDiv.appendChild(checkMarkIcon);
