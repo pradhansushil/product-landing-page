@@ -317,6 +317,13 @@ header nav ul li:not(:last-child) {
   transition: box-shadow var(--transition-ease);
 }
 
+/* Anchor Scroll Offset */
+#product-overview,
+#videos,
+#pre-order {
+  scroll-margin-top: 70px;
+}
+
 /* Product */
 .specs-list {
   list-style: none;
