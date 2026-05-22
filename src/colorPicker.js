@@ -1,4 +1,4 @@
-import setSelected from "./setSelected";
+import setSelected from "./setSelected.js";
 
 export default function initColorPicker(container, attributeName, onSelect) {
   container.swatches.forEach((swatch) => {
