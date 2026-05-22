@@ -1,3 +1,5 @@
+import setSelected from "./setSelected";
+
 export default function initColorPicker(container, attributeName, onSelect) {
   container.swatches.forEach((swatch) => {
     if (swatch.classList.contains("selected")) {
@@ -6,8 +8,7 @@ export default function initColorPicker(container, attributeName, onSelect) {
     }
 
     swatch.addEventListener("click", () => {
-      container.swatches.forEach((s) => s.classList.remove("selected"));
-      swatch.classList.add("selected");
+      setSelected(container.swatches, swatch);
       const value = swatch.getAttribute(attributeName);
       onSelect(value);
     });

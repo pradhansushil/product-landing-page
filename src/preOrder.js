@@ -1,5 +1,6 @@
 import initColorPicker from "./colorPicker.js";
 import getDOMElements from "./dom-elements.js";
+import setSelected from "./setSelected.js";
 
 const shoeSizeGroups = ["8–9.5", "10–11.5", "12–13.5", "14–15.5"];
 const container = document.querySelector(".size-selector");
@@ -13,10 +14,7 @@ function initSizeSelector() {
     btn.type = "button";
 
     btn.addEventListener("click", () => {
-      container
-        .querySelectorAll("button")
-        .forEach((b) => b.classList.remove("selected"));
-      btn.classList.add("selected");
+      setSelected(container.querySelectorAll("button"), btn);
       selectedSize = group;
     });
 
