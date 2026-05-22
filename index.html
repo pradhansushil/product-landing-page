@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ARCYN - Product Landing Page</title>
     <link rel="stylesheet" href="styles.css" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
@@ -25,9 +28,9 @@
         xmlns="http://www.w3.org/2000/svg"
         aria-label="ARCYN"
         role="img"
->     
+      >
         <text id="logo-text" x="0" y="34">ARCYN</text>
-        <rect id="logo-accent"/>
+        <rect id="logo-accent" />
       </svg>
       <nav id="nav-bar">
         <ul>
@@ -35,68 +38,83 @@
             <a href="#product-overview" class="nav-link"> Product Overview </a>
           </li>
           <li><a href="#videos" class="nav-link">Videos</a></li>
-          <li><a href="#pre-order" class="nav-link">Pre-Order</a></li>          
+          <li><a href="#pre-order" class="nav-link">Pre-Order</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <div class="hero-slideshow">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Signature Series</p>
+          <h1>ARCYN RE1GN | The Air Is Yours</h1>
+          <p class="hero-subhead">
+            Engineered for athletes who refuse to be grounded.
+          </p>
+          <p class="hero-price">Made for the court. $149.99</p>
+        </div>
 
+        <div class="hero-slideshow">
           <div class="slide active">
-            <img id="main-shoe-img" src="images/hero.jpg" alt="An image of a golden yellow performance basketball shoe." />
+            <img
+              id="main-shoe-img"
+              src="images/hero.jpg"
+              alt="An image of a golden yellow performance basketball shoe."
+            />
             <div class="color-picker">
-              <button 
-                class="swatch selected" 
-                data-image="images/hero.jpg" 
-                title="Golden Yellow" 
-                style="background-color: #FFC300;"
-              ></button>
-              <button 
-                class="swatch"
-                data-image="images/grey.jpg"
-                title="Grey"
-                style="background-color: #888888;"
+              <button
+                class="swatch selected"
+                data-image="images/hero.jpg"
+                title="Golden Yellow"
+                style="background-color: #ffc300"
               ></button>
               <button
                 class="swatch"
-                data-image="images/orange.jpg" 
+                data-image="images/grey.jpg"
+                title="Grey"
+                style="background-color: #888888"
+              ></button>
+              <button
+                class="swatch"
+                data-image="images/orange.jpg"
                 title="Orange"
-                style="background-color: #FF6600;"
+                style="background-color: #ff6600"
               ></button>
               <button
                 class="swatch"
                 data-image="images/red.jpg"
                 title="Red"
-                style="background-color: #CC0000;"
-              ></button>              
+                style="background-color: #cc0000"
+              ></button>
             </div>
           </div>
 
           <div class="slide">
-            <img src="images/shoe-technology.png" alt="An image showing the technology inside the basketball shoes." />
+            <img
+              src="images/shoe-technology.png"
+              alt="An image showing the technology inside the basketball shoes."
+            />
           </div>
 
           <div class="slide">
-            <img src="images/shoe-grip.jpg" alt="An image showing the grip of the basketball shoe." />
+            <img
+              src="images/shoe-grip.jpg"
+              alt="An image showing the grip of the basketball shoe."
+            />
           </div>
-          
-          <button class="slide-arrow prev" aria-label="Previous slide">&#8592</button>
-          <button class="slide-arrow next" aria-label="Next slide">&#8594</button>
-          
+
+          <button class="slide-arrow prev" aria-label="Previous slide">
+            &#8592;
+          </button>
+          <button class="slide-arrow next" aria-label="Next slide">
+            &#8594;
+          </button>
+
           <div class="slide-dots">
             <button class="dot active" aria-label="Go to slide 1"></button>
             <button class="dot" aria-label="Go to slide 2"></button>
             <button class="dot" aria-label="Go to slide 3"></button>
           </div>
-        </div>
-
-        <div class="hero-content">
-          <p class="hero-eyebrow">Signature Series</p>
-          <h1>ARCYN RE1GN | The Air Is Yours</h1>
-          <p class="hero-subhead">Engineered for athletes who refuse to be grounded.</p>
-          <p class="hero-price">Made for the court. $149.99</p>
         </div>
 
         <a href="#pre-order" class="cta-align-right">Pre-order</a>
@@ -106,11 +124,14 @@
         <h2>Product Description</h2>
 
         <p>
-          Designed for athletes who refuse to be grounded, ARCYN basketball shoes are engineered for explosive performance on any court.
+          Designed for athletes who refuse to be grounded, ARCYN basketball
+          shoes are engineered for explosive performance on any court.
         </p>
 
         <p>
-          Built for both indoor and outdoor play, they deliver unmatched agility, stability, and responsiveness — so you can soar above the competition.
+          Built for both indoor and outdoor play, they deliver unmatched
+          agility, stability, and responsiveness — so you can soar above the
+          competition.
         </p>
 
         <ul class="specs-list">
@@ -133,14 +154,16 @@
         </ul>
 
         <table>
-          <caption>Size ordering guide</caption>
+          <caption>
+            Size ordering guide
+          </caption>
           <thead>
             <tr>
               <th>Your Shoe Size</th>
               <th>Order Size</th>
             </tr>
           </thead>
-          
+
           <tbody>
             <tr>
               <td>8, 8.5, 9, 9.5</td>
@@ -170,14 +193,26 @@
               src="videos/Unleash_Your_Game_with_ARCYN_Basketball_Shoes.mp4"
               type="video/mp4"
             />
-            <track kind="captions" label="English captions" srclang="en" src="" default />
+            <track
+              kind="captions"
+              label="English captions"
+              srclang="en"
+              src=""
+              default
+            />
           </video>
         </div>
 
         <div class="pick-up-game-video">
           <video width="100%" controls>
             <source src="videos/Pick_Up_Game_with_ARCYN.mp4" type="video/mp4" />
-            <track kind="captions" label="English captions" srclang="en" src="" default />
+            <track
+              kind="captions"
+              label="English captions"
+              srclang="en"
+              src=""
+              default
+            />
           </video>
         </div>
       </section>
@@ -191,53 +226,54 @@
           <ul>
             <li>
               <i class="fa-solid fa-check"></i>
-              2-Year Manufacturer Warrenty Included</li>
+              2-Year Manufacturer Warrenty Included
+            </li>
             <li>
               <i class="fa-solid fa-check"></i>
-              Exclusive color options</li>
+              Exclusive color options
+            </li>
           </ul>
         </div>
         <div class="pre-order-meta">
           <p>Pre-order ends August 31st</p>
-          <p>Ships October 15th | Express shipping $20</p>        
+          <p>Ships October 15th | Express shipping $20</p>
         </div>
         <h2>Size</h2>
-        <div class="size-selector">
-        </div>
+        <div class="size-selector"></div>
         <div class="color-picker">
           <button
             class="swatch selected"
             data-color="golden-yellow"
             title="Golden Yellow"
-            style="background-color: #FFC300;"
+            style="background-color: #ffc300"
           ></button>
           <button
             class="swatch"
             data-color="orange"
             title="Orange"
-            style="background-color: #FF6600;"
+            style="background-color: #ff6600"
           ></button>
           <button
             class="swatch"
             data-color="red"
             title="Red"
-            style="background-color: #CC0000;"
+            style="background-color: #cc0000"
           ></button>
           <button
             class="swatch"
             data-color="grey"
             title="Grey"
-            style="background-color: #888888;"
+            style="background-color: #888888"
           ></button>
           <button
             class="swatch"
             data-color="black"
             title="Black"
-            style="background-color: #000;"
+            style="background-color: #000"
           ></button>
         </div>
 
-        <button class="pre-order-btn"> Own The Air Now </button>
+        <button class="pre-order-btn">Own The Air Now</button>
         <ul class="trust-signals">
           <li class="trust-signal-item">
             <i class="fa-solid fa-truck"></i>
@@ -253,20 +289,15 @@
           </li>
         </ul>
 
-        <form
-          id="form"
-          class="toggleable-form"
-          action="#"
-          method="POST"
-        >
+        <form id="form" class="toggleable-form" action="#" method="POST">
           <div class="form-field">
             <label for="email">Email: </label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" />
           </div>
 
           <div class="form-field">
             <label for="name">Full Name: </label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" />
           </div>
           <button type="submit" class="form-submit-btn">Confirm</button>
         </form>
@@ -274,43 +305,70 @@
     </main>
 
     <footer class="footer-info">
-  <div class="footer-top">
-    <p class="brand-title">ARCYN</p>
+      <div class="footer-top">
+        <p class="brand-title">ARCYN</p>
 
-    <div class="footer-middle">
-      <nav aria-label="Footer">
-        <a href="#">Contact Us</a>
-        <a href="#">About Us</a>
-        <a href="#">Terms</a>
-      </nav>
-      <div class="footer-copy">
-        <p>Breaking limits, one court at a time.</p>
-        <p>&copy; 2025 ARCYN All rights reserved.</p>
-        <p>Disclaimer: This is a personal portfolio project created for
-          educational purposes only. ARCYN is a fictional brand and this site is
-          not intended for commercial use.</p>
+        <div class="footer-middle">
+          <nav aria-label="Footer">
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Terms</a>
+          </nav>
+          <div class="footer-copy">
+            <p>Breaking limits, one court at a time.</p>
+            <p>&copy; 2025 ARCYN All rights reserved.</p>
+            <p>
+              Disclaimer: This is a personal portfolio project created for
+              educational purposes only. ARCYN is a fictional brand and this
+              site is not intended for commercial use.
+            </p>
+          </div>
+        </div>
+
+        <div class="social-media-icons">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://x.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="X Twitter"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
       </div>
-    </div>
-
-    <div class="social-media-icons">
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X Twitter">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
-        <i class="fa-brands fa-youtube"></i>
-      </a>
-    </div>
-  </div>
-</footer>
+    </footer>
 
     <script>
       document.querySelectorAll("video").forEach((video) => {
