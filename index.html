@@ -316,7 +316,7 @@
           </nav>
           <div class="footer-copy">
             <p>Breaking limits, one court at a time.</p>
-            <p>&copy; 2025 ARCYN All rights reserved.</p>
+            <p class="year">&copy;</p>
             <p>
               Disclaimer: This is a personal portfolio project created for
               educational purposes only. ARCYN is a fictional brand and this
@@ -376,6 +376,10 @@
           video.currentTime = 0;
         });
       });
+
+      const displayYear = document.querySelector(".year");
+      const currentYear = new Date().getFullYear();
+      displayYear.innerHTML = ` &copy; ${currentYear} ARCYN All rights reserved`;
     </script>
 
     <script type="module" src="src/hero.js"></script>
