@@ -17,6 +17,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header id="header">
@@ -45,79 +50,84 @@
 
     <main>
       <section class="hero">
-        <div class="hero-content">
-          <p class="hero-eyebrow">Signature Series</p>
-          <h1>ARCYN RE1GN | The Air Is Yours</h1>
-          <p class="hero-subhead">
-            Engineered for athletes who refuse to be grounded.
-          </p>
-          <p class="hero-price">Made for the court. $149.99</p>
-        </div>
+        <div class="swiper hero-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide hero-slide">
+              <img
+                src="images/hero-dunk-sunset.jpg"
+                alt="Athlete dunking at sunset"
+              />
+              <div class="hero-content">
+                <p class="hero-eyebrow">Signature Series</p>
+                <h1>The Air Is Yours</h1>
+                <p class="hero-subhead">
+                  Engineered for athletes who refuse to be grounded.
+                </p>
+              </div>
+            </div>
 
-        <div class="hero-slideshow">
-          <div class="slide active">
-            <img
-              id="main-shoe-img"
-              src="images/hero.jpg"
-              alt="An image of a golden yellow performance basketball shoe."
-            />
-            <div class="color-picker">
-              <button
-                class="swatch selected"
-                data-image="images/hero.jpg"
-                title="Golden Yellow"
-                style="background-color: #ffc300"
-              ></button>
-              <button
-                class="swatch"
-                data-image="images/grey.jpg"
-                title="Grey"
-                style="background-color: #888888"
-              ></button>
-              <button
-                class="swatch"
-                data-image="images/orange.jpg"
-                title="Orange"
-                style="background-color: #ff6600"
-              ></button>
-              <button
-                class="swatch"
-                data-image="images/red.jpg"
-                title="Red"
-                style="background-color: #cc0000"
-              ></button>
+            <!-- Slide 2 -->
+            <div class="swiper-slide hero-slide">
+              <img
+                src="images/basketball-hoop-sunset.jpeg"
+                alt="Basketball hoop at sunset"
+              />
+              <div class="hero-content">
+                <p class="hero-eyebrow">Built For Any Court</p>
+                <h1>Any Court. Any Time.</h1>
+                <p class="hero-subhead">
+                  Indoor grip. Outdoor durability. Zero compromise.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide hero-slide">
+              <img
+                id="main-shoe-img"
+                src="images/hero.jpg"
+                alt="ARCYN RE1GN basketball shoe in golden yellow"
+              />
+              <div class="hero-content">
+                <p class="hero-eyebrow">ARCYN RE1GN</p>
+                <h1>Choose Your Colorway</h1>
+                <div class="color-picker">
+                  <button
+                    class="swatch selected"
+                    data-image="images/hero.jpg"
+                    title="Gold"
+                    style="background-color: #ffc300"
+                  ></button>
+                  <button
+                    class="swatch"
+                    data-image="images/grey.jpg"
+                    title="Gray"
+                    style="background-color: #888888"
+                  ></button>
+                  <button
+                    class="swatch"
+                    data-image="images/orange.jpg"
+                    title="Orange"
+                    style="background-color: #ff6600"
+                  ></button>
+                  <button
+                    class="swatch"
+                    data-image="images/red.jpg"
+                    title="Red"
+                    style="background-color: #cc0000"
+                  ></button>
+                </div>
+                <a href="#pre-order" class="hero-cta">Pre-Order Now</a>
+              </div>
             </div>
           </div>
 
-          <div class="slide">
-            <img
-              src="images/shoe-technology.png"
-              alt="An image showing the technology inside the basketball shoes."
-            />
-          </div>
-
-          <div class="slide">
-            <img
-              src="images/shoe-grip.jpg"
-              alt="An image showing the grip of the basketball shoe."
-            />
-          </div>
-
-          <button class="slide-arrow prev" aria-label="Previous slide">
-            &#8592;
-          </button>
-          <button class="slide-arrow next" aria-label="Next slide">
-            &#8594;
-          </button>
-
-          <div class="slide-dots">
-            <button class="dot active" aria-label="Go to slide 1"></button>
-            <button class="dot" aria-label="Go to slide 2"></button>
-            <button class="dot" aria-label="Go to slide 3"></button>
-          </div>
+          <!-- Swiper controls -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-
-        <a href="#pre-order" class="cta-align-right">Pre-order</a>
       </section>
 
       <section id="product-overview">
@@ -192,7 +202,7 @@
             <source
               src="videos/Unleash_Your_Game_with_ARCYN_Basketball_Shoes.mp4"
               type="video/mp4"
-            />            
+            />
           </video>
         </div>
 
@@ -356,6 +366,8 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
       document.querySelectorAll("video").forEach((video) => {
         video.addEventListener("ended", () => {
@@ -369,6 +381,7 @@
     </script>
 
     <script type="module" src="src/hero.js"></script>
+
     <script type="module" src="src/preOrder.js"></script>
   </body>
 </html>
