@@ -172,10 +172,17 @@ header nav ul li:not(:last-child) {
   line-height: 1.4;
   letter-spacing: 0.03rem;
 }
-.color-picker {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
+
+.hero-slide--product img {
+  object-position: 40% center;
+}
+
+.hero-slide--product .color-picker {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 .swatch {
   position: relative;
