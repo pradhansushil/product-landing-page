@@ -210,6 +210,7 @@ header nav ul li:not(:last-child) {
 .swiper-button-prev,
 .swiper-button-next {
   color: var(--white);
+  z-index: 10;
 }
 .swiper-pagination-bullet {
   background: rgba(255, 255, 255, 0.4);

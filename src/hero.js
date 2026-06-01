@@ -1,37 +1,22 @@
-import initColorPicker from "./colorPicker.js";
-import getDOMElements from "./dom-elements.js";
+import getDomElements from "./dom-elements.js";
 
-function currentDot(dom, index) {
-  dom.dots.forEach((dot) => dot.classList.remove("active"));
-  dom.dots[index].classList.add("active");
-}
+const swiper = new Swiper(".hero-swiper", {
+  loop: true,
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: false,
+  },
+});
 
-function goToSlide(dom, index) {
-  dom.slides.forEach((slide) => slide.classList.remove("active"));
-  dom.slides[index].classList.add("active");
-  currentDot(dom, index);
-}
-
-function initHero() {
-  const heroSection = document.querySelector(".hero");
-  const dom = getDOMElements(heroSection);
-
-  let currentSlide = 0;
-  goToSlide(dom, 0);
-
-  initColorPicker(dom, "data-image", (value) => {
-    dom.mainImg.src = value;
+const dom = getDomElements(document.querySelector(".hero-swiper"));
+dom.swatches.forEach((swatch) => {
+  swatch.addEventListener("click", () => {
+    document.querySelector(".swatch.selected").classList.remove("selected");
+    swatch.classList.add("selected");
+    dom.mainImg.src = swatch.dataset.image;
   });
-
-  dom.arrows[0].addEventListener("click", () => {
-    currentSlide = (currentSlide - 1 + dom.slides.length) % dom.slides.length;
-    goToSlide(dom, currentSlide);
-  });
-
-  dom.arrows[1].addEventListener("click", () => {
-    currentSlide = (currentSlide + 1) % dom.slides.length;
-    goToSlide(dom, currentSlide);
-  });
-}
-
-initHero();
+});
