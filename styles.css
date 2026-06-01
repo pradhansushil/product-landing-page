@@ -177,13 +177,24 @@ header nav ul li:not(:last-child) {
   object-position: 40% center;
 }
 
-.hero-slide--product .color-picker {
+/* Product controls: color picker + CTA grouped and centered at the bottom */
+.hero-product-controls {
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
+
+.hero-product-controls .color-picker {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .swatch {
   position: relative;
   border: 2px solid transparent;
@@ -196,16 +207,15 @@ header nav ul li:not(:last-child) {
 .swatch.selected {
   border-color: white;
 }
+
 .hero-cta {
   display: inline-block;
-  margin-top: 0.5rem;
   background: var(--cta-color);
   border-radius: 5px;
   color: var(--white);
   padding: 0.5rem 1rem;
   font-size: 0.85rem;
   text-decoration: none;
-  align-self: flex-start;
   transition: box-shadow var(--transition-ease);
 }
 .hero-cta:hover {
@@ -213,6 +223,7 @@ header nav ul li:not(:last-child) {
     0 0 12px var(--cta-color),
     0 0 24px var(--cta-color);
 }
+
 /* Swiper overrides */
 .swiper-button-prev,
 .swiper-button-next {
