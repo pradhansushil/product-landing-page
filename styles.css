@@ -199,8 +199,8 @@ header nav ul li:not(:last-child) {
   position: relative;
   border: 2px solid transparent;
   border-radius: 50%;
-  height: 28px;
-  width: 28px;
+  height: 24px;
+  width: 24px;
   cursor: pointer;
   padding: 0;
 }
