@@ -179,7 +179,7 @@ header nav ul li:not(:last-child) {
 
 .hero-slide--product .color-picker {
   position: absolute;
-  bottom: 5rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
