@@ -196,7 +196,12 @@ header nav ul li:not(:last-child) {
 }
 
 .swatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
+
   border: 2px solid transparent;
   border-radius: 50%;
   height: 24px;
@@ -356,17 +361,22 @@ header nav ul li:not(:last-child) {
   align-items: center;
 }
 
-.features i,
-.swatch .fa-check {
+.features i {
   color: #28a745;
+  margin-right: 10px;
 }
 
-.features i {
-  margin-right: 10px;
+.pre-order .color-picker {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  margin-bottom: 1rem;
 }
 
 .swatch .fa-check {
   display: none;
+  color: var(--white);
 }
 
 .swatch.selected .fa-check {
