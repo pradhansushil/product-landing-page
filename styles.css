@@ -20,6 +20,10 @@
   --footer-subtext: #ccc;
   --hover-highlight: #d3d3d3;
   --hover-accent: #ffcc00;
+
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
 }
 
 /* General Styles */
@@ -240,12 +244,17 @@ header nav ul li:not(:last-child) {
   color: var(--white);
   z-index: 10;
 }
-.swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.4);
-  opacity: 1;
+/* .swiper-horizontal is auto-added by Swiper to the container div at runtime */
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
-.swiper-pagination-bullet-active {
-  background: var(--white);
+
+.swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  background: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
 }
 
 /* Anchor Scroll Offset */
