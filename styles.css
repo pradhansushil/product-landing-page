@@ -141,6 +141,11 @@ header nav ul li:not(:last-child) {
   object-fit: cover;
   object-position: center;
 }
+
+.hero-slide--court img {
+  object-position: 68% 20%;
+}
+
 .hero-content {
   position: absolute;
   top: 10%;
