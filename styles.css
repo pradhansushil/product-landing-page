@@ -19,7 +19,6 @@
   --footer-text: #f1f1f1;
   --footer-subtext: #ccc;
   --hover-highlight: #d3d3d3;
-  --hover-accent: #ffcc00;
 
   --swiper-pagination-bullet-size: 10px;
   --swiper-pagination-bullet-inactive-color: #ffffff;
@@ -560,7 +559,7 @@ header nav ul li:not(:last-child) {
 }
 
 .confirm-wrapper {
-  border-top: 1px solid var(--hover-accent);
+  border-top: 1px solid #ffcc00;
   margin-top: 1rem;
 }
 
@@ -658,7 +657,7 @@ header nav ul li:not(:last-child) {
 }
 
 .footer-info .social-media-icons a:hover {
-  color: var(--hover-accent);
+  color: #ff6600;
 }
 
 /* ============================================================
