@@ -117,6 +117,7 @@ header nav ul li:not(:last-child) {
   text-decoration: none;
   font-size: 0.8rem;
   transition: background-color var(--transition-ease);
+  white-space: nowrap;
 }
 
 .nav-link:hover {
