@@ -1,6 +1,10 @@
 import getDomElements from "./dom-elements.js";
 
 const swiper = new Swiper(".hero-swiper", {
+  effect: "fade", // ← switches effect
+  fadeEffect: {
+    crossFade: true, // ← prevents flicker between slides
+  },
   loop: true,
   navigation: {
     prevEl: ".swiper-button-prev",

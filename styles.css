@@ -131,6 +131,7 @@ header nav ul li:not(:last-child) {
 }
 .hero-swiper {
   height: 100%;
+  --swiper-fade-transition-duration: 600ms;
 }
 .hero-slide {
   position: relative;
