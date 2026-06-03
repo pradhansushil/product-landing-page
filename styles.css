@@ -280,10 +280,14 @@ header nav ul li:not(:last-child) {
 }
 
 .specs-list li::before {
-  content: "•";
   position: absolute;
   left: 1.2rem;
-  top: 0.1em;
+  top: 0.6em;
+
+  background-color: #e85d04;
+  content: "";
+  width: 14px;
+  height: 2px;
 }
 
 .spec-label {
