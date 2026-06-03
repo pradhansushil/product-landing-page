@@ -306,6 +306,13 @@ header nav ul li:not(:last-child) {
   margin: 0 auto;
   max-width: 25rem;
 }
+#product-overview table caption {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 0.4rem;
+}
 
 #product-overview table th {
   background-color: var(--dark-gray);
@@ -664,6 +671,10 @@ header nav ul li:not(:last-child) {
     font-size: 0.9rem;
   }
 
+  #product-overview table caption {
+    font-size: 1.1rem;
+  }
+
   /* Videos */
   .ad-video,
   .pick-up-game-video {
@@ -693,6 +704,10 @@ header nav ul li:not(:last-child) {
   .nav-link {
     padding: 0.8rem;
     font-size: unset;
+  }
+
+  #product-overview table caption {
+    font-size: 1.2rem;
   }
 
   /* Videos */
