@@ -294,7 +294,7 @@ header nav ul li:not(:last-child) {
   color: var(--cta-color);
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 0.9375rem;
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
